@@ -24,7 +24,7 @@ Before you start, take a moment to see the `kit` struture.
 │   ├── /reducers/              # Your reducers
 │   ├── /store.js               # Define your application store here
 │   ├── /routes.js              # Routing information here
-│   ├── /index.js               # Server-side startup script
+│   ├── /index.js               # Application startup script
 │   └── index.html              # Don't need to care about this
 ├── package.json                # You must know this
 └── yarn.lock                   # Don't need to care about this

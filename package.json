@@ -13,11 +13,19 @@
   "scripts": {
     "build": "NODE_ENV=production parcel build src/index.html -d build --detailed-report --no-source-maps",
     "clean": "rimraf build dist",
+    "precommit": "lint-staged",
     "start": "parcel ./src/index.html",
-    "precommit": "lint-staged"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "lint-staged": {
-    "*.js": ["eslint src"]
+    "*.js": [
+      "eslint src"
+    ]
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/test/setup.js"
   },
   "dependencies": {
     "history": "^4.7.2",
@@ -33,17 +41,26 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
+    "babel-jest": "^23.0.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.9.1",
     "husky": "^0.14.3",
+    "jest": "^23.1.0",
+    "jest-cli": "^23.1.0",
     "lint-staged": "^7.2.0",
     "parcel-bundler": "^1.9.0",
+    "react-addons-test-utils": "^15.6.2",
     "react-hot-loader": "^4.3.3",
+    "react-test-renderer": "^16.4.1",
+    "redux-mock-store": "^1.5.3",
     "rimraf": "^2.6.2"
   }
 }

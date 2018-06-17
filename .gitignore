@@ -3,3 +3,4 @@ build
 dist
 .tern*
 .cache
+coverage
