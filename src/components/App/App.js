@@ -1,17 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-const App = ({children}) => (
+const App = ({ children }) => (
   <div>
     <h1>Rerepa</h1>
     <div>
-      <Link to="/counter" href="/counter">
+      <Link to='/' href='/'>
+        Home
+      </Link>
+    </div>
+    <div>
+      <Link to='/counter' href='/counter'>
         Counter
       </Link>
     </div>
     <div>
-      <Link to="/nothing" href="/nothing">
+      <Link to='/nothing' href='/nothing'>
         Nothing here?
       </Link>
     </div>
@@ -20,11 +25,11 @@ const App = ({children}) => (
 )
 
 App.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 }
 
 App.defaultProps = {
-  children: null
+  children: null,
 }
 
 export default App
