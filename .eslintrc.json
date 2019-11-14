@@ -1,5 +1,5 @@
 {
-  "extends": "airbnb",
+  "extends": ["airbnb"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2017,
@@ -10,7 +10,8 @@
     "jest": true
   },
   "rules": {
-    "semi": ["off"],
+    "semi": ["error", "never"],
+    "jsx-quotes": ["error", "prefer-single"],
     "object-curly-spacing": ["off"],
     "react/jsx-filename-extension": ["off"],
     "comma-dangle": ["off"],

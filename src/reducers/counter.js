@@ -1,8 +1,8 @@
-import {ActionTypes} from '../core/constants'
+import { ActionTypes } from '../core/constants'
 
 const initialState = 0
 
-export default function(state = initialState, {type}) {
+export default function(state = initialState, { type }) {
   switch (type) {
     case ActionTypes.INCREMENT:
       return state + 1

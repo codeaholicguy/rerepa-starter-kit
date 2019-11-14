@@ -1,9 +1,9 @@
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
 import Counter from './Counter'
-import {increment, decrement} from './actions'
+import { increment, decrement } from './actions'
 
-export default connect(
-  ({counter}) => ({counter}),
-  {increment, decrement}
-)(Counter)
+export default connect(({ counter }) => ({ counter }), {
+  increment,
+  decrement,
+})(Counter)

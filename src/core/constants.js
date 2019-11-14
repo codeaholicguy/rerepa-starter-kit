@@ -1,15 +1,17 @@
-import {func, object, shape, string, number, bool} from 'prop-types'
+import {
+  func, object, shape, string, number, bool
+} from 'prop-types'
 
 export const ActionTypes = {
   INCREMENT: 'INCREMENT',
-  DECREMENT: 'DECREMENT'
+  DECREMENT: 'DECREMENT',
 }
 
 export const locationShape = shape({
   pathname: string.isRequired,
   search: string.isRequired,
   hash: string.isRequired,
-  state: object
+  state: object,
 })
 
 export const historyShape = shape({
@@ -23,17 +25,17 @@ export const historyShape = shape({
   length: number.isRequired,
   push: func.isRequired,
   replace: func.isRequired,
-  location: locationShape.isRequired
+  location: locationShape.isRequired,
 })
 
 export const matchShape = shape({
   isexact: bool.isrequired,
   path: string.isrequired,
   url: string.isrequired,
-  params: object
+  params: object,
 })
 
 export const storeShape = shape({
   routing: object,
-  counter: number
+  counter: number,
 })

@@ -1,14 +1,15 @@
-import React, {Component} from 'react'
-import {Provider} from 'react-redux'
-import {ConnectedRouter} from 'react-router-redux'
+import React, { Component } from 'react'
+import { Provider } from 'react-redux'
+import { ConnectedRouter } from 'react-router-redux'
 
-import {historyShape, storeShape} from '../../constants'
+import { historyShape, storeShape } from '../../constants'
 import createRoutes from '../../../routes'
 
 export default class Container extends Component {
+  // eslint-disable-next-line react/static-property-placement
   static propTypes = {
     history: historyShape.isRequired,
-    store: storeShape.isRequired
+    store: storeShape.isRequired,
   }
 
   getRoutes = () => {
@@ -20,7 +21,7 @@ export default class Container extends Component {
   }
 
   render() {
-    const {store, history} = this.props
+    const { store, history } = this.props
 
     return (
       <Provider store={store}>
